@@ -38,9 +38,9 @@
  *           $selectedNodeLink is set to true.
  * @property string $xmlId
  *           The ID that should be set on the top level 'ul' XHTML tag.
- * @property array(string) $highlightNodeIds
+ * @property string[] $highlightNodeIds
  *           Which IDs should have the 'highlight' CSS class added.
- * @property array(string) $subtreeHighlightNodeIds
+ * @property string[] $subtreeHighlightNodeIds
  *           Which subtree IDs should have the 'highlight' CSS class added.
  * @property bool $selectedNodeLink
  *           If enabled, only the requested node is shown in links, and not the full path.
@@ -57,7 +57,7 @@ class ezcTreeVisitorXHTMLOptions extends ezcBaseOptions
      *         if $options contains a property not defined
      * @throws ezcBaseValueException
      *         if $options contains a property with a value not allowed
-     * @param array(string=>mixed) $options
+     * @param array<string, mixed> $options
      */
     public function __construct( array $options = array() )
     {

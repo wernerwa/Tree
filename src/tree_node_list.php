@@ -65,9 +65,9 @@
  *
  * @see ezcTreeNodeListIterator
  *
- * @property-read string $size
+ * @property-read int $size
  *                The number of nodes in the list.
- * @property-read array(string=>ezcTreeNode) $nodes
+ * @property-read array<string, ezcTreeNode> $nodes
  *                The nodes belonging to this list.
  *
  * @package Tree
@@ -78,7 +78,7 @@ class ezcTreeNodeList implements ArrayAccess
     /**
      * Holds the nodes of this list.
      *
-     * @var array(ezcTreeNode)
+     * @var ezcTreeNode[]
      */
     private $nodes;
 

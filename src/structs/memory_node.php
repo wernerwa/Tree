@@ -53,7 +53,7 @@ class ezcTreeMemoryNode extends ezcBaseStruct
     /**
      * Contains the children of this node
      *
-     * @var array(string=>ezcTreeMemoryNode)
+     * @var array<string, ezcTreeMemoryNode>
      */
     public $children;
 
@@ -61,7 +61,7 @@ class ezcTreeMemoryNode extends ezcBaseStruct
      * Constructs an ezcTreeMemoryNode object.
      *
      * @param ezcTreeNode       $node
-     * @param array(string=>ezcTreeMemoryNode) $children
+     * @param array<string, ezcTreeMemoryNode> $children
      * @param ezcTreeMemoryNode $parent
      */
     public function __construct( ezcTreeNode $node, array $children, ezcTreeMemoryNode $parent = null  )

@@ -76,7 +76,7 @@ class ezcTreeVisitorPlainText implements ezcTreeVisitor
     /**
      * Holds all the edges of the graph.
      *
-     * @var array(string=>array(string))
+     * @var array<string, string[]>
      */
     protected $edges = array();
 
@@ -151,7 +151,7 @@ class ezcTreeVisitorPlainText implements ezcTreeVisitor
      *
      * @param string $id
      * @param int    $level
-     * @param array(int=>bool) $levelLast
+     * @param array<int, bool> $levelLast
      *
      * @return string
      */

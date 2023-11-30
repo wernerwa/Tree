@@ -57,7 +57,7 @@ class ezcTreeMemory extends ezcTree
     /**
      * Contains a list of all nodes, indexed by node ID that link directly to the create node so that they can be looked up quickly.
      *
-     * @var array(string=>ezcTreeMemoryNode)
+     * @var array<string, ezcTreeMemoryNode>
      */
     private $nodeList = array();
 

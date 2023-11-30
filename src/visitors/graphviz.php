@@ -45,14 +45,14 @@ class ezcTreeVisitorGraphViz implements ezcTreeVisitor
     /**
      * Holds the displayed strings for each of the nodes.
      *
-     * @var array(string=>string)
+     * @var array<string, string>
      */
     protected $nodes = array();
 
     /**
-     * Holds all the edges of the graph.
+     * Holds all the edges of the graph by the ids
      *
-     * @var array(id=>array(ezcTreeNode))
+     * @var array<string, ezcTreeNode[]>
      */
     protected $edges = array();
 
@@ -68,7 +68,7 @@ class ezcTreeVisitorGraphViz implements ezcTreeVisitor
     }
 
     /**
-     * Visits the node and sets the the member variables according to the node
+     * Visits the node and sets the member variables according to the node
      * type and contents.
      *
      * @param ezcTreeVisitable $visitable

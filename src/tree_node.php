@@ -66,7 +66,7 @@ class ezcTreeNode implements ezcTreeVisitable
     /**
      * Holds the properties of this class.
      *
-     * @var array(string=>mixed)
+     * @var array<string, mixed>
      */
     private $properties = array();
 

@@ -74,7 +74,7 @@ class ezcTreeNodeListIterator implements Iterator
     /**
      * Holds the nodes of this list.
      *
-     * @var array(ezcTreeNode)
+     * @var ezcTreeNode[]
      */
     private $nodeList;
 

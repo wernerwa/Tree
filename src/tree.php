@@ -76,7 +76,7 @@ abstract class ezcTree implements ezcTreeVisitable
     /**
      * Holds the properties of this class.
      *
-     * @var array(string=>mixed)
+     * @var array<string, mixed>
      */
     protected $properties = array( 'nodeClassName' => 'ezcTreeNode' );
 
@@ -97,7 +97,7 @@ abstract class ezcTree implements ezcTreeVisitable
     /**
      * Contains a list of transaction items.
      *
-     * @var array(ezcTreeTransactionItem)
+     * @var ezcTreeTransactionItem[]
      */
     private $transactionList = array();
 

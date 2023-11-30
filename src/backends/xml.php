@@ -334,7 +334,7 @@ class ezcTreeXml extends ezcTree
      * Fetches all the child "node" DOM elements of the node with ID $nodeId.
      *
      * @param string $nodeId
-     * @return array(string)
+     * @return string[]
      */
     private function fetchChildIds( $nodeId )
     {
