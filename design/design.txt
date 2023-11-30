@@ -172,7 +172,7 @@ all the necessary operations which can not be shared between the different
 algorithms of storing trees. Example::
 
     <?php
-        $tree = new ezcTreeDbParentChild(                                            
+        $tree = new ezcTreeDbParentChild(
             ezcDbInstance::get(),
             'parent_child',
             $store
@@ -197,7 +197,7 @@ also possible to add more fields that can be filled in through `callbacks`_.
 ezcTreeDbSerializedPath
 ```````````````````````
 
-Is an implementation of a Serialized/`Materialized path`_ algorithm for 
+Is an implementation of a Serialized/`Materialized path`_ algorithm for
 storing tree structures in a database. The table schema looks like::
 
     CREATE TABLE 'serialized_path' (
@@ -319,7 +319,7 @@ Code::
 
     <?php
         $tree = ezcTreeXml::create(
-            $this->tempDir . '/new-tree.xml', 
+            $this->tempDir . '/new-tree.xml',
             new ezcTreeXmlInternalDataStore()
         );
 

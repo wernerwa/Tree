@@ -8,9 +8,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -88,7 +88,7 @@ abstract class ezcTreeTest extends ezcTestCase
     public function testIssetStore()
     {
         $tree = $this->setUpTestTree();
-        self::assertSame( true, isset( $tree->store ) ); 
+        self::assertSame( true, isset( $tree->store ) );
     }
 
     public function testSetStore()
@@ -129,13 +129,13 @@ abstract class ezcTreeTest extends ezcTestCase
     public function testIssetNodeClassName()
     {
         $tree = $this->setUpTestTree();
-        self::assertSame( true, isset( $tree->nodeClassName ) ); 
+        self::assertSame( true, isset( $tree->nodeClassName ) );
     }
 
     public function testSetNodeClassName()
     {
         $tree = $this->setUpTestTree();
-        
+
         $tree->nodeClassName = 'TestExtendedTreeNode';
         self::assertSame( 'TestExtendedTreeNode', $tree->nodeClassName );
     }
@@ -143,7 +143,7 @@ abstract class ezcTreeTest extends ezcTestCase
     public function testSetNodeClassNameWrongValue1()
     {
         $tree = $this->setUpTestTree();
-        
+
         try
         {
             $tree->nodeClassName = 42;
@@ -158,7 +158,7 @@ abstract class ezcTreeTest extends ezcTestCase
     public function testSetNodeClassNameWrongValue2()
     {
         $tree = $this->setUpTestTree();
-        
+
         try
         {
             $tree->nodeClassName = 'ezcTreeMemoryNode';
@@ -876,7 +876,7 @@ abstract class ezcTreeTest extends ezcTestCase
                     'Pongo' => array(
                         'Bornean Orangutan',
                         'Sumatran Orangutan',
-                    ), 
+                    ),
                     'Gorilla' => array(
                         'Western Gorilla' => array(
                             'Western Lowland Gorilla',
@@ -886,7 +886,7 @@ abstract class ezcTreeTest extends ezcTestCase
                             'Mountain Gorilla',
                             'Eastern Lowland Gorilla',
                         ),
-                    ), 
+                    ),
                     'Homo' => array(
                         'Homo Sapiens' => array(
                             'Homo Sapiens Sapiens',
@@ -944,9 +944,9 @@ abstract class ezcTreeTest extends ezcTestCase
         $this->addTestData( $tree );
 
         $expected = array(
-            'Gorilla', 'Western Gorilla', 'Western Lowland Gorilla', 
-            'Cross River Gorilla', 'Eastern Gorilla', 'Mountain Gorilla', 
-            'Eastern Lowland Gorilla' 
+            'Gorilla', 'Western Gorilla', 'Western Lowland Gorilla',
+            'Cross River Gorilla', 'Eastern Gorilla', 'Mountain Gorilla',
+            'Eastern Lowland Gorilla'
         );
         $list = $tree->fetchSubtreeDepthFirst( 'Gorilla' );
         $nodes = $list->nodes;
@@ -976,9 +976,9 @@ abstract class ezcTreeTest extends ezcTestCase
         $tree = $this->setUpEmptyTestTree();
         $this->addTestData( $tree );
 
-        $expected = array( 
-            'Gorilla', 'Western Gorilla', 'Eastern Gorilla', 
-            'Western Lowland Gorilla', 'Cross River Gorilla', 
+        $expected = array(
+            'Gorilla', 'Western Gorilla', 'Eastern Gorilla',
+            'Western Lowland Gorilla', 'Cross River Gorilla',
             'Mountain Gorilla', 'Eastern Lowland Gorilla'
         );
         $list = $tree->fetchSubtreeBreadthFirst( 'Gorilla' );

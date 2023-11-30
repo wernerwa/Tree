@@ -9,9 +9,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -39,25 +39,25 @@
  *     $list = new ezcTreeNodeList;
  *     $list->addNode( new ezcTreeNode( $tree, 'Leo' ) );
  *     $list->addNode( new ezcTreeNode( $tree, 'Virgo' ) );
- * 
+ *
  *     // Retrieve the list's size
  *     echo $list->size, "\n"; // prints 2
- * 
+ *
  *     // Find a node in the list
  *     $node = $list['Virgo'];
- * 
+ *
  *     // Add nodes in an alternative way
  *     $list['Libra'] = new ezcTreeNode( $tree, 'Libra' );
- * 
+ *
  *     // Remove a node from the list
  *     unset( $list['Leo'] );
- * 
+ *
  *     // Checking if a node exists
  *     if ( isset( $list['Scorpius'] ) )
  *     {
  *         // do something if it exists
  *     }
- * 
+ *
  *     // Use the associated data store to fetch the data for all nodes at once
  *     $list->fetchDataForNodes();
  * ?>
@@ -166,7 +166,7 @@ class ezcTreeNodeList implements ArrayAccess
      * Adds a new node with node ID $nodeId to the list.
      *
      * This method is part of the SPL ArrayAccess interface.
-     * 
+     *
      * @throws ezcTreeInvalidClassException if the data to be set as array
      *         element is not an instance of ezcTreeNode
      * @throws ezcTreeIdsDoNotMatchException if the array index $nodeId does not

@@ -9,9 +9,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -34,13 +34,13 @@
  * <?php
  *     // Instantiating an existing tree, and creating a new tree is done through
  *     // the inherited classes
- *     
+ *
  *     // Creating a new in-memory tree
  *     $tree = ezcTreeMemory::create( new ezcTreeMemoryDataStore() );
- * 
+ *
  *     // Opening an existing tree in an XML file
  *     $tree = new ezcTreeXml( 'test.xml', new ezcTreeXmlInternalDataStore() );
- * 
+ *
  *     // Opening an existing tree from a database, using a nested set backend
  *     // - This retrieves data from the ezcTreeDbExternalTableDataStore store
  *     //   using $this->dbh as database handle, $dataTable as table where to fetch
@@ -48,11 +48,11 @@
  *     $store = new ezcTreeDbExternalTableDataStore( $this->dbh, $dataTable, 'id' );
  *     // - It uses the 'nested_set' table for keeping the tree structure
  *     $tree = new ezcTreeDbNestedSet( $this->dbh, 'nested_set', $store );
- * 
+ *
  *     // Fetching nodes and subtrees
  *     $node = $tree->fetchNodeById( 'He' );
  *     $nodeList = $tree->fetchSubtree( 'Pantherinae' );
- * 
+ *
  *     // Checking for relations between nodes
  *     $tree->isDescendantOf( 'Tiger', 'Panthera' );
  *     $tree->isSiblingOf( 'Lion', 'Leopard' );
@@ -67,7 +67,7 @@
  * @property      boolean             $autoId
  *                When set to true, you can add nodes to the database without
  *                setting the ID. This only works with numeric keys however.
- * 
+ *
  * @package Tree
  * @version //autogentag//
  */
@@ -174,7 +174,7 @@ abstract class ezcTree implements ezcTreeVisitable
     /**
      * Returns true if the property $name is set, otherwise false.
      *
-     * @param string $name     
+     * @param string $name
      * @return bool
      * @ignore
      */
@@ -214,7 +214,7 @@ abstract class ezcTree implements ezcTreeVisitable
     /**
      * Creates a new tree node with node ID $nodeId and $data.
      *
-     * This method returns by default an object of the ezcTreeNode class, 
+     * This method returns by default an object of the ezcTreeNode class,
      * however if a replacement is configured through the nodeClassName property
      * an object of that class is returned instead. This object is guaranteed
      * to inherit from ezcTreeNode.
@@ -502,7 +502,7 @@ abstract class ezcTree implements ezcTreeVisitable
     }
 
     /**
-     * Starts an transaction in which all tree modifications are queued until 
+     * Starts an transaction in which all tree modifications are queued until
      * the transaction is committed with the commit() method.
      */
     public function beginTransaction()

@@ -9,9 +9,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -34,12 +34,12 @@
  * <?php
  *     // Create a new tree in a new XML file
  *     $tree = ezcTreeXml::create(
- *         'new-tree.xml', 
+ *         'new-tree.xml',
  *         new ezcTreeXmlInternalDataStore()
  *     );
- * 
+ *
  *     // Open an existing XML file containing a tree structure
- *     $tree = new ezcTreeXml(  
+ *     $tree = new ezcTreeXml(
  *         'existing-tree.xml',
  *         new ezcTreeXmlInternalDataStore()
  *     );
@@ -228,7 +228,7 @@ class ezcTreeXml extends ezcTree
     /**
      * Returns true if the property $name is set, otherwise false.
      *
-     * @param string $name     
+     * @param string $name
      * @return bool
      * @ignore
      */
@@ -653,7 +653,7 @@ class ezcTreeXml extends ezcTree
         $elem1 = $this->getNodeById( $child1Id );
         $elem2 = $this->getNodeById( $child2Id );
         return (
-            ( $child1Id !== $child2Id ) && 
+            ( $child1Id !== $child2Id ) &&
             ( $elem1->parentNode->getAttribute( 'id' ) === $elem2->parentNode->getAttribute( 'id' ) )
         );
     }

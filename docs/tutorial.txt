@@ -13,7 +13,7 @@ algorithms for storing tree structures in a relational database—each with
 different properties—the component supports multiple back-ends. The Tree
 component itself comes with a memory (ezcTreeMemory) and XML (ezcTreeXml)
 back-end. The TreeDatabaseTiein component provides three back-ends that store
-the tree structure in a database table. 
+the tree structure in a database table.
 
 Aside from storing the hierarchical data itself, the component also enables you to
 associate data with the tree nodes. The data is stored through a data store.
@@ -71,7 +71,7 @@ ezcTreeNodeListIterator
   drastically reduce the number of queries being run in case a database-based
   data store is used (such as ezcTreeDbExternalTableDataStore or
   ezcTreePersistentObjectDataStore).
-  
+
 
 Basic usage
 ===========
@@ -116,7 +116,7 @@ the node IDs. This is shown in lines 13 to 16. All operations are
 implemented on the tree level, so using the syntax in lines 13 to 16 will
 result in slightly higher performance. Lines 18 to 23 demonstrate another tree
 operation: fetching a sub-tree. All operations that can return more than one
-node do so as an ezcTreeNodeList. 
+node do so as an ezcTreeNodeList.
 
 Refer to the ezcTreeNode documentation for a full list of supported
 operations.

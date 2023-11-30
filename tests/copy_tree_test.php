@@ -8,9 +8,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -76,7 +76,7 @@ class ezcTreeCopyTest extends ezcTestCase
                     'Pongo' => array(
                         'Bornean Orangutan',
                         'Sumatran Orangutan',
-                    ), 
+                    ),
                     'Gorilla' => array(
                         'Western Gorilla' => array(
                             'Western Lowland Gorilla',
@@ -86,7 +86,7 @@ class ezcTreeCopyTest extends ezcTestCase
                             'Mountain Gorilla',
                             'Eastern Lowland Gorilla',
                         ),
-                    ), 
+                    ),
                     'Homo' => array(
                         'Homo Sapiens' => array(
                             'Homo Sapiens Sapiens',

@@ -9,9 +9,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -30,14 +30,14 @@
  *
  * The methods that operate on nodes (fetchChildren, fetchPath, ...,
  * isSiblingOf) are all marshalled to calls on the tree (that is stored in the
- * $tree private variable) itself. 
+ * $tree private variable) itself.
  *
  * Example:
  * <code>
  * <?php
  *     // Creates a new node with ID 'O' and as data 'Oxygen'
  *     $node = new ezcTreeNode( $this->tree, 'O', 'Oxygen' );
- * 
+ *
  *     // Adds a node as child element to another already create node in a tree
  *     $parentNode->addChild( $node );
  * ?>
@@ -176,7 +176,7 @@ class ezcTreeNode implements ezcTreeVisitable
     /**
      * Returns true if the property $name is set, otherwise false.
      *
-     * @param string $name     
+     * @param string $name
      * @return bool
      * @ignore
      */
@@ -199,12 +199,12 @@ class ezcTreeNode implements ezcTreeVisitable
     /**
      * Inject data.
      *
-     * Used to set the data from a data loader. Should not be used for 
-     * interfacing with the tree node, since the node will not be flagged as 
+     * Used to set the data from a data loader. Should not be used for
+     * interfacing with the tree node, since the node will not be flagged as
      * modified by this method.
-     * 
+     *
      * @access private
-     * @param string $data 
+     * @param string $data
      * @return void
      */
     public function injectData( $data )

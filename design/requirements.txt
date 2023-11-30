@@ -2,7 +2,7 @@ eZ Component: Tree, Requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Author: Derick Rethans (Based on draft by Thomas Koch)
-:Revision: $Revision$ 
+:Revision: $Revision$
 :Date: $Date$
 
 Introduction
@@ -34,7 +34,7 @@ with multiple backends for each specific optimized algorithm.
 Besides the database backends there could be other places on where to
 store tree structures - for example simply on the file system, in a file
 containing a PHP array or in an XML file. The backend mechanism should support
-this as well. 
+this as well.
 
 The following operations should be possible on the trees:
 
@@ -71,7 +71,7 @@ node itself, for example through a property.
 Special considerations
 ======================
 
-- Use simple IDs even for the nested set. Usually you have related objects 
+- Use simple IDs even for the nested set. Usually you have related objects
   that refer to the ID.
 - The use of Database and PersistentObject should be optional.
 
@@ -90,11 +90,11 @@ Parent - child relations
 Serialized/Materialized path
 
   This technique is an extension to the parent-child relations algorithm
-  as the path to a node is saved in the node's row like '1/2/5'. 
+  as the path to a node is saved in the node's row like '1/2/5'.
 
   eZ Publish currently uses a serialized path to define the location of
   a node. A select for a subtree would look like::
- 
+
     SELECT ... WHERE path LIKE '/1/5/23/%'
 
   This is cheap on writing, but not really cheap on reading. Support may
@@ -110,7 +110,7 @@ Nested sets
 Nested Intervals
 
   This algorithm wants to solve the problem of expensive inserts in the nested
-  sets algorithm. While the left and right values of nested sets allow only a 
+  sets algorithm. While the left and right values of nested sets allow only a
   finite number of children between them, the nested intervals algorithm uses
   dense domains for a theoretically unlimited number of children inside an
   interval. [4]_ [5]_
@@ -138,8 +138,8 @@ References
 ==========
 
 .. [1] Joe Celko: `Trees in SQL <http://www.intelligententerprise.com/001020/celko.jhtml?_requestid=697912>`_
-.. [2] Joe Celko: `Trees and Hierarchies in SQL for Smarties.  <http://www.celko.com/books.htm>`_ Publicly available chapters: 
-    Chapter 1: `Graphs, Trees, and Hierarchies <http://www.dbazine.com/ofinterest/oi-articles/celko24>`_ is available at 
+.. [2] Joe Celko: `Trees and Hierarchies in SQL for Smarties.  <http://www.celko.com/books.htm>`_ Publicly available chapters:
+    Chapter 1: `Graphs, Trees, and Hierarchies <http://www.dbazine.com/ofinterest/oi-articles/celko24>`_ is available at
     dbazine.com.  Chapter 2: `Adjacency List Model <http://www.sqlsummit.com/AdjacencyList.htm>`_ is available at SQLSummit.
 .. [3] Gijs Van Tuider: `Storing Hierarchical Data in a Database <http://www.sitepoint.com/article/hierarchical-data-database>`_
 .. [4] Vadim Tropashko: `SQL Design Patterns <http://www.rampant-books.com/book_2006_1_sql_coding_styles.htm>`_

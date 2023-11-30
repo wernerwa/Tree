@@ -9,9 +9,9 @@ switch ( $dirParts[count( $dirParts ) - 3] )
 }
 
 /**
- * Autoload ezc classes 
- * 
- * @param string $className 
+ * Autoload ezc classes
+ *
+ * @param string $className
  */
 function __autoload( $className )
 {

@@ -8,9 +8,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -80,7 +80,7 @@ class ezcTreeNodeTest extends ezcTestCase
     public function testSetId()
     {
         $node = new ezcTreeNode( $this->tree, 'C', 'Carbon' );
-        
+
         try
         {
             $node->id = 'Koolstof';
@@ -95,7 +95,7 @@ class ezcTreeNodeTest extends ezcTestCase
     public function testSetUnknownProperty()
     {
         $node = new ezcTreeNode( $this->tree, 'N', 'Nitrogen' );
-        
+
         try
         {
             $node->unknown = 42;
@@ -160,7 +160,7 @@ class ezcTreeNodeTest extends ezcTestCase
     public function testSetDataFetchedNotBool()
     {
         $node = new ezcTreeNode( $this->tree, 'Si', 'Silicon' );
-        
+
         try
         {
             $node->dataFetched = 42;
@@ -175,7 +175,7 @@ class ezcTreeNodeTest extends ezcTestCase
     public function testSetDataStoredNotBool()
     {
         $node = new ezcTreeNode( $this->tree, 'P', 'Phosphorus' );
-        
+
         try
         {
             $node->dataStored = "oops!";
@@ -190,7 +190,7 @@ class ezcTreeNodeTest extends ezcTestCase
     public function testSetDataFetched()
     {
         $node = new ezcTreeNode( $this->tree, 'S', 'Sulfur' );
-        
+
         $node->dataFetched = true;
         self::assertSame( true, $node->dataFetched );
         $node->dataFetched = false;
@@ -200,7 +200,7 @@ class ezcTreeNodeTest extends ezcTestCase
     public function testSetDataStored()
     {
         $node = new ezcTreeNode( $this->tree, 'Cl', 'Chlorine' );
-        
+
         $node->dataStored = true;
         self::assertSame( true, $node->dataStored );
         $node->dataStored = false;
