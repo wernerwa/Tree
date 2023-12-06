@@ -89,6 +89,11 @@ class ezcTreeNodeListIterator implements Iterator
     private $tree;
 
     /**
+     * @var bool
+     */
+    private $valid;
+
+    /**
      * Constructs a new ezcTreeNodeListIterator object over $nodeList.
      *
      * The $tree argument is used so that data can be fetched on-demand.
@@ -105,12 +110,13 @@ class ezcTreeNodeListIterator implements Iterator
             $this->tree->store->fetchDataForNodes( $nodeList );
         }
         $this->nodeList = $nodeList->nodes;
+        $this->valid = (bool)$nodeList->size;
     }
 
     /**
      * Rewinds the internal pointer back to the start of the nodelist.
      */
-    public function rewind()
+    public function rewind(): void
     {
         reset( $this->nodeList );
         if ( count( $this->nodeList ) )
@@ -128,7 +134,7 @@ class ezcTreeNodeListIterator implements Iterator
      *
      * @return string
      */
-    public function key()
+    public function key(): string
     {
         return key( $this->nodeList );
     }
@@ -139,6 +145,7 @@ class ezcTreeNodeListIterator implements Iterator
      *
      * @return mixed
      */
+    #[\ReturnTypeWillChange]
     public function current()
     {
         $node = current( $this->nodeList );
@@ -148,7 +155,7 @@ class ezcTreeNodeListIterator implements Iterator
     /**
      * Advances the internal pointer to the next node in the nodelist.
      */
-    public function next()
+    public function next(): void
     {
         $nextElem = next( $this->nodeList );
         if ( $nextElem === false )
@@ -164,7 +171,7 @@ class ezcTreeNodeListIterator implements Iterator
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->valid;
     }

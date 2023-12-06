@@ -143,7 +143,7 @@ class ezcTreeNodeList implements ArrayAccess
      * @return bool
      * @ignore
      */
-    public function offsetExists( $nodeId )
+    public function offsetExists( $nodeId ): bool
     {
         return array_key_exists( $nodeId, $this->nodes );
     }
@@ -157,7 +157,7 @@ class ezcTreeNodeList implements ArrayAccess
      * @return ezcTreeNode
      * @ignore
      */
-    public function offsetGet( $nodeId )
+    public function offsetGet( $nodeId ): ezcTreeNode
     {
         return $this->nodes[$nodeId];
     }
@@ -175,7 +175,7 @@ class ezcTreeNodeList implements ArrayAccess
      * @param  ezcTreeNode $data
      * @ignore
      */
-    public function offsetSet( $nodeId, $data )
+    public function offsetSet( $nodeId, $data ): void
     {
         if ( !$data instanceof ezcTreeNode )
         {
@@ -196,7 +196,7 @@ class ezcTreeNodeList implements ArrayAccess
      * @param string $nodeId
      * @ignore
      */
-    public function offsetUnset( $nodeId )
+    public function offsetUnset( $nodeId ): void
     {
         unset( $this->nodes[$nodeId] );
     }
@@ -207,7 +207,7 @@ class ezcTreeNodeList implements ArrayAccess
      *
      * @param ezcTreeNode $node
      */
-    public function addNode( ezcTreeNode $node )
+    public function addNode( ezcTreeNode $node ): void
     {
         $this->nodes[$node->id] = $node;
     }

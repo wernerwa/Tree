@@ -122,7 +122,7 @@ class ezcTreeVisitorYUI implements ezcTreeVisitor
      */
     protected function formatData( $data, $highlight )
     {
-        $data = htmlspecialchars( $data );
+        $data = htmlspecialchars( $data, ENT_COMPAT );
         return $data;
     }
 

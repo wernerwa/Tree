@@ -107,7 +107,7 @@ class ezcTreeVisitorXHTML implements ezcTreeVisitor
      */
     protected function formatData( $data, $highlight )
     {
-        $data = htmlspecialchars( $data );
+        $data = htmlspecialchars( $data, ENT_COMPAT );
         return $highlight ? "<div class=\"highlight\">$data</div>" : $data;
     }
 
@@ -156,11 +156,11 @@ class ezcTreeVisitorXHTML implements ezcTreeVisitor
         if ( $this->options->selectedNodeLink )
         {
             $slice = array_slice( $path, -1 );
-            $path = htmlspecialchars( $this->options->basePath . '/' . array_pop( $slice ) );
+            $path = htmlspecialchars( $this->options->basePath . '/' . array_pop( $slice ), ENT_COMPAT );
         }
         else
         {
-            $path = htmlspecialchars( $this->options->basePath . '/' . join( '/', $path ) );
+            $path = htmlspecialchars( $this->options->basePath . '/' . join( '/', $path ), ENT_COMPAT );
         }
         return $path;
     }
